@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>Wax Cloud Wallet testnet demo</title>
+<link href="reset.css" rel="stylesheet" />
+<link href="style.css" rel="stylesheet" />
+<link rel="icon" href="./favicon.png">
+<body>
+  <div class="header">
+    <h1 class="page-title">WCW Testnet Demo</h1>
+    <p onclick="loginWAX()" class="btn-login" id="loginBtn">Login</p>
+  </div>
+  <div class="panel">
+      <div class="panel-left">
+          <p>This sample dapp operates the <b>test.waxtn</b> contract's <b>update</b> action.</p>
+          <button id="loginBtn2" class="btn-login-2" onclick="loginWAX()">Login WCW</button>
+          <div class="test-form hide" id="testform">
+            <p><label>Updater:</label><input class="form-input" id="updater" disabled /></p>
+            <p><label>Message:</label><input class="form-input" id="message" maxlength="32" /></p>
+            <!-- <p><label>Fail:</label><input type="checkbox" id="fail" value="fail"></p>-->
+            <button id="sign" onclick="signTransaction()" class="btn-sign">Sign transaction</button>
+          </div>
+      </div>
+      <div class="panel-right" id="logPanel"></div>
+  </div>
+<label>Transaction Results</label>
+<pre id="response"></pre>
+
+<script src="waxjs.js"></script>
+<script src="json-formatter.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>

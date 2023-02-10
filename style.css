@@ -1,0 +1,120 @@
+body {
+	width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body * {
+	font-family: monospace, Arial, sans-serif;
+}
+
+.header {
+	    height: 76.8px;
+    position: relative;
+    border: outset 3px #92d1f7;
+    border-left: none;
+    border-right: none;
+}
+
+.btn-login {
+	    position: absolute;
+    right: 20px;
+    top: 24.5px;
+    /* line-height: 76.8px; */
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: darkslateblue;
+}
+
+.btn-login:hover {
+	color: aquamarine;
+}
+
+.btn-login-2,
+.btn-sign {
+    background: #3bb5ff 0 0 no-repeat padding-box;
+    color: #fff;
+    height: 40px;
+    line-height: 54px;
+    min-width: 160px;
+    margin: 0 auto 20px;
+    border-radius: 100px;
+    border: unset;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: unset;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-login-2:hover {
+	opacity: 0.8;
+}
+
+.page-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    background-color: #92d1f7;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.panel {
+	
+	        width: 100%;
+    margin: 0;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    height: calc(100vh - 76.8px);
+}
+
+.panel-left {
+    width: 30%;
+    background-color: #eee;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    border-right: outset 3px #eee;
+}
+
+.panel-right {
+    width: 70%;
+    background-color: #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+.hide {
+	display: none;
+}
+
+.form-input {
+    background: #fff 0 0 no-repeat padding-box;
+    border: 2px solid #073b4c;
+    border-radius: 25px;
+    color: #308194;
+    height: 32px;
+    padding: 0 20px;
+    box-sizing: content-box;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.form-input[disabled] {
+	cursor: not-allowed;
+	background-color: #eee;
+	user-select: none;
+}
