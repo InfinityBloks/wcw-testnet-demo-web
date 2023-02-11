@@ -11,6 +11,8 @@
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
   }
 
+  let isLogged = false;
+
   const wax = new waxjs.WaxJS({
     rpcEndpoint: 'https://testnet.wax.pink.gg',
     waxSigningURL: 'https://all-access.waxtest.net'
@@ -39,6 +41,7 @@
   }
 
   async function loginWAX() {
+    if(isLogged) return;
     try {
       const userAccount = await wax.login();
 
@@ -48,6 +51,7 @@
       document.getElementById('testform').show();
       document.getElementById('message').value = Math.random().toString(36).substring(2);
       prependTextLog(`✔ Login as <a href="https://testnet.waxblock.io/account/${userAccount}" target="_blank" title="View account on testnet.waxblock.io"><i><strong>${userAccount}</strong></i></a>`);
+      isLogged = true;
     } catch(e) {
       prependTextLog(`❌ ${e.message}`);
     }
